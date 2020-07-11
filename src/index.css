@@ -3,7 +3,6 @@ body {
     min-width: 250px;
 }
 
-/* Include the padding and border in an element's total width and height */
 * {
     box-sizing: border-box;
 }
@@ -21,6 +20,10 @@ span {
 
 span:hover {
     background: #ddd;
+}
+
+span.checked:hover {
+    background: #bbbbbb;
 }
 
 span.checked {
@@ -42,7 +45,6 @@ span.checked::before {
     width: 7px;
 }
 
-/* Style the close button */
 .close {
     position: absolute;
     right: 0;
@@ -55,7 +57,6 @@ span.checked::before {
     color: white;
 }
 
-/* Style the header */
 .header {
     background-color: #f44336;
     padding: 30px 40px;
@@ -63,14 +64,12 @@ span.checked::before {
     text-align: center;
 }
 
-/* Clear floats after the header */
 .header:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Style the input */
 input {
     margin: 0;
     border: none;
@@ -81,7 +80,6 @@ input {
     font-size: 16px;
 }
 
-/* Style the "Add" button */
 .addBtn {
     padding: 10px;
     width: 25%;
