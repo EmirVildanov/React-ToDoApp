@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
-const TasksContext = React.createContext()
+const TasksContext = React.createContext();
 
 class Task extends React.Component {
     render() {
@@ -47,7 +47,7 @@ class TasksProvider extends React.Component {
         newArray.push(
             {
                 text: text,
-                checked: false
+                checked: false,
             });
         return newArray;
     }
@@ -69,7 +69,7 @@ class TasksProvider extends React.Component {
 
     changeTaskReadyStatus(text) {
         const newArray = this.state.tasks.slice();
-        const indexOfDeletingElement = this.findCurrentTaskIndex(text)
+        const indexOfDeletingElement = this.findCurrentTaskIndex(text);
         newArray[indexOfDeletingElement].checked = !newArray[indexOfDeletingElement].checked;
         return newArray;
     }
@@ -102,7 +102,7 @@ function TasksBoard() {
 
 class InputPane extends React.Component {
     confirmInput(context) {
-        const input = document.getElementById("newTaskInput").value
+        const input = document.getElementById("newTaskInput").value;
         if (input !== '') {
             context.addTask(input);
             document.getElementById("newTaskInput").value = "";
@@ -128,7 +128,7 @@ class InputPane extends React.Component {
                             >
                             </input>
                             <span onClick={() => {
-                                this.confirmInput(context)
+                                this.confirmInput(context);
                             }} className="addBtn">
                                 Add
                             </span>
